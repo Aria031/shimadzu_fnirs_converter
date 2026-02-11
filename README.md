@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18605987.svg)](https://doi.org/10.5281/zenodo.18605987)
+
 ### shimadzu-fnirs-converter
 
 **Shimadzu fNIRS TXT → SNIRF (.snirf) & MNE FIF (.fif)**
