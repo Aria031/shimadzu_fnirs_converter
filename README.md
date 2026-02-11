@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18605987.svg)](https://doi.org/10.5281/zenodo.18605987)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18607367.svg)](https://doi.org/10.5281/zenodo.18607367)
 
 ### shimadzu-fnirs-converter
 
