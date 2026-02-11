@@ -138,11 +138,11 @@ shimadzu-fnirs-converter \
 ### Citation
 ```bibtex
 @software{dong2026shimadzu,
-  @software{dong2026shimadzu,
-  author  = {Jiaran Dong and Jingyan Zhang and Chen Feng},
+  author  = {Dong, Jiaran and Zhang, Jingyan and Feng, Chen},
   title   = {shimadzu-fnirs-converter: Shimadzu fNIRS TXT to SNIRF/FIF converter},
   year    = {2026},
-  url     = {https://github.com/Aria031/shimadzu-fnirs-converter}
+  doi     = {10.5281/zenodo.18605987},
+  url     = {https://doi.org/10.5281/zenodo.18605987}
 }
 
 ```
