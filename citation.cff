@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: shimadzu-fnirs-converter
+message: If you use this software, please cite it as follows.
+type: software
+
+authors:
+  - family-names: Dong
+    given-names: Jiaran
+    affiliation: SCHOOL OF CHILD DEVELOPMENT AND EDUCATION (FAMILY DEVELOPMENT INSTITUTE)，CHINA WOMEN'S UNIVERSITY 
+
+  - family-names: Zhang
+    given-names: Jingyan
+    affiliation: School of Education, University of New South Wales, Sydney, Australia
+
+  - family-names: Feng
+    given-names: Chen
+    affiliation: Institute of Psychology, Chinese Academy of Sciences
+
+version: 0.1.1
+doi: 10.5281/zenodo.18605987
+date-released: 2026-02-11
+url: https://github.com/Aria031/shimadzu-fnirs-converter
+
+license: MIT
+repository-code: https://github.com/Aria031/shimadzu-fnirs-converter
+keywords:
+  - fNIRS
+  - SNIRF
+  - MNE-Python
+  - neuroimaging
+  - brain-computer-interface
