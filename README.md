@@ -141,8 +141,8 @@ shimadzu-fnirs-converter \
   author  = {Dong, Jiaran and Zhang, Jingyan and Feng, Chen},
   title   = {shimadzu-fnirs-converter: Shimadzu fNIRS TXT to SNIRF/FIF converter},
   year    = {2026},
-  doi     = {10.5281/zenodo.18605987},
-  url     = {https://doi.org/10.5281/zenodo.18605987}
+  doi     = {10.5281/zenodo.18607367},
+  url     = {https://doi.org/10.5281/zenodo.18607367}
 }
 
 ```
