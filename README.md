@@ -39,7 +39,7 @@ Compatible with:
 ### From PyPI (recommended)
 
 ```bash
-pip install shimadzu-fnirs-converter
+pip install shimadzu_fnirs_converter
 
 ### Development install
 ```bash
