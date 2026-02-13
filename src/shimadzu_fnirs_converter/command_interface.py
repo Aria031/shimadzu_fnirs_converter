@@ -15,7 +15,7 @@ logger = logging.getLogger("snirf_converter")
 
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
-        prog="shimadzu-fnirs-converter",
+        prog="shimadzu_fnirs_converter",
         description=(
             "Convert Shimadzu TXT + origin/others (+ optional events) "
             "-> MNE Raw (.fif) and optional SNIRF (.snirf)."
