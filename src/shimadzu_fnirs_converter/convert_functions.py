@@ -705,7 +705,7 @@ def build_raw_from_matrix(
     ch_pos_optodes = {k: tuple(v.tolist()) for k, v in ch_pos_optodes.items()}
 
     # -------------------------
-    # ✅ 关键校验：meas keys 必须能对上 raw.ch_names
+    # 关键校验：meas keys 必须能对上 raw.ch_names
     # -------------------------
     raw_name_set = set(raw.ch_names)
     meas_key_set = set(ch_pos_meas.keys())
@@ -721,11 +721,11 @@ def build_raw_from_matrix(
     if extra_in_montage:
         logger.warning(f"[montage] meas coords has extra keys not in raw: {extra_in_montage[:10]}")
 
-    # ✅ 如果 meas 坐标缺失很多，直接报错（比 silent failure 强）
+    # 如果 meas 坐标缺失很多，直接报错（比 silent failure 强）
     if len(ch_pos_meas) == 0:
         raise RuntimeError("ch_pos_meas 是空的：build_channel_positions 没生成任何测量通道坐标。请检查 T#/R# 标签是否匹配。")
 
-    # ✅ 如果 meas key 对不上 raw.ch_names（比如大小写/空格差异），给出硬提示
+    # 如果 meas key 对不上 raw.ch_names（比如大小写/空格差异），给出硬提示
     # 这里用“必须完全覆盖”策略（fNIRS 画3D/拓扑需要）
     if len(raw_name_set - meas_key_set) > 0:
         raise RuntimeError(
@@ -735,7 +735,7 @@ def build_raw_from_matrix(
 
     # ---- 2.4 一次性 montage：meas + optodes + fiducials ----
     ch_pos_all = {}
-    ch_pos_all.update(ch_pos_meas)      # ✅ meas: 必须匹配 raw.ch_names
+    ch_pos_all.update(ch_pos_meas)      # meas: 必须匹配 raw.ch_names
     ch_pos_all.update(ch_pos_optodes)   # optodes: S#/D# 额外点
 
     montage = mne.channels.make_dig_montage(
@@ -1102,7 +1102,7 @@ def write_snirf_h5(
     landmark_coords,
     subject="sub-01",
     wavelengths=(760, 830),
-    events_dict: Optional[Dict[str, List[Tuple[float, float, float]]]] = None,  # ✅ 新增
+    events_dict: Optional[Dict[str, List[Tuple[float, float, float]]]] = None,  
 ):
 
     """
@@ -1285,7 +1285,7 @@ def build_artifacts(
     others_coords = parse_coords_file(others_path, unit=length_unit, scale_to_m=scale_to_m)
     sources_dict, detectors_dict, ch_coords_dict = split_others_into_t_r_ch(others_coords)
 
-    # ✅ 2.1) filter pairs by optodes actually present in others.csv
+    # 2.1) filter pairs by optodes actually present in others.csv
     data_matrix, channel_pairs = filter_pairs_by_optodes(
         data_matrix=data_matrix,
         channel_pairs=channel_pairs,
@@ -1308,7 +1308,7 @@ def build_artifacts(
         channel_pairs=channel_pairs,
         others_coords=others_coords,
         origin_coords=origin_coords,
-        sfreq=sfreq,          # ✅ 这里现在一定是 float 了
+        sfreq=sfreq,         
         subject=subject,
     )
 
@@ -1458,8 +1458,8 @@ def main_pipeline(
             landmark_labels=list(origin_coords.keys()),
             landmark_coords=np.array(list(origin_coords.values())) if origin_coords else np.zeros((0, 3)),
             subject=subject,
-            wavelengths=(760, 830),                 # ✅ 真实波长就填这里
-            events_dict=events_dict_for_snirf       # ✅ 自动 or csv 都会写进 stim
+            wavelengths=(760, 830),                 # 真实波长就填这里
+            events_dict=events_dict_for_snirf       # 自动 or csv 都会写进 stim
         )
 
         logger.info("SNIRF 写入完成（custom writer）")
